@@ -36,6 +36,6 @@ db.scores.delete_many({})
 db.personnages.insert_many(personnages)
 db.monstres.insert_many(monstres)
 
-print("Base de données initialisée avec succés.")
+print("Base de données initialisée avec succés")
 
    

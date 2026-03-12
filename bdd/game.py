@@ -1,5 +1,7 @@
 import random
 
+client = MongoClient("mongodb://localhost:27017/")
+db = client["jeu_video"]
 
 # Le choix de l'équipe 3 personnages  
 # Le combat (avec une boucle qui tourne tant qu'on a des héros en vie)
@@ -40,7 +42,7 @@ if heros_mort and  monstre_mort:
     print("Les deux sont morts")
 
 # si aucun n'est mort
-if not heros_mort and not monstre_mort
+if not heros_mort and not monstre_mort:
     print("Les deux sont encore vivants")
 
 # affichier le score final 
@@ -50,7 +52,7 @@ def score_final():
 #affichier le nom 
 def nom():
 
-    
+
 # a la fin on sauvegarde le score 
 donnes_du_score = {"jouer":nom , "score":score_final}
 db.scores.insert_one(donnes_du_score)
